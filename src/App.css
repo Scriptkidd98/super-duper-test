@@ -1,42 +1,141 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  font-display: swap;
+}
+.body-div {
+  margin: 0px auto;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fffffe;
+  padding: 50px 0px;
+}
+button:disabled{
+  cursor: default;
+}
+button {
+  cursor: pointer;
+}
+h1, span, p {
+  color: #2b2c34;
+}
+@media(max-width: 540px) {
+  .body-div {
+    width: 100%;
+  }
+}
+@media(min-width: 541px)  and (max-width: 991px) {
+  .body-div {
+    width: 70%;
+  }
+}
+@media(min-width: 992px) {
+  .body-div {
+    width: 700px;
+  }
+}
+form button {
+  margin-top: 30px;
+  background-color: #6246ea;
+  color: #fffffe;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-right: 1.5px solid rgba(107, 58, 187, 0.2);
+  border-left: 1.5px solid rgba(107, 58, 187, 0.2);
+  box-shadow: 0px 0px 0px 1.5px #1e0130, 0px 1px 0px 1.5px #8b0bdb, 0px 2px 0px 0px #541c77;
+}
+form button:hover {
+  background-color: #674de8;
+}
+.form-each-input-div p {
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+.form-each-input-div {
+  border: 1px solid rgba(134, 134, 134, 0.5);
+  border-radius: 7px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+}
+.input-overlap-paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0px;
+  margin: -20px 0px 0px 15px;
+  background-color: white;
+  max-width: 70px;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.form-each-input-div input,
+.form-each-input-div select {
+  border: none;
+  outline: none !important;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.form-each-input-div input,
+.form-each-input-div select {
+  height: 35px;
+  margin-top: -15px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.form-each-input-div input:focus {
+  outline: none !important;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-each-input-div input,
+.form-each-input-div select {
+  width: 95%;
+  padding: 0px;
+  margin-left: 3%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form {
+  display: flex;
+  flex-direction: column;
 }
-
-.card {
-  padding: 2em;
+.terms-check-div {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 20px min-content;
+  gap: 8px;
+  align-items: center;
 }
 
-.read-the-docs {
-  color: #888;
+#customCheck input {
+  display: none;
+}
+.check-label {
+  cursor: pointer;
+}
+.completion-check-image {
+  display: none;
+}
+.completion-check-image.active {
+  display: block;
+}
+
+.check-label:hover .completion-check-image.active circle {
+  stroke-dasharray: 0 0;
+}
+.check-label:focus {
+  outline-offset: 2px;
+}
+.terms-check-div p {
+  white-space: nowrap;
+  font-size: 13px;
+  margin: -2px 0px 0px 0px;
+}
+a {
+  text-decoration: none;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset;
+  -webkit-box-shadow: 0 0 0 1000px white inset;
 }
